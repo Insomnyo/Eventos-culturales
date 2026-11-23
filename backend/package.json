@@ -1,0 +1,36 @@
+{
+  "name": "eventos-culturales-backend",
+  "version": "2.2.0",
+  "private": true,
+  "type": "module",
+  "description": "API REST (Express + MySQL) de la plataforma de eventos culturales",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "create-admin": "node scripts/createAdmin.js",
+    "test:concurrency": "node --test tests/",
+    "audit": "npm audit --omit=dev",
+    "test:policy": "node --test tests/userStatusPolicy.test.js",
+    "test:unit": "node --test tests/dni.test.js tests/userStatusPolicy.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "file-type": "^19.6.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.0",
+    "mysql2": "^3.11.5",
+    "nodemailer": "^6.9.16",
+    "pino": "^9.6.0",
+    "pino-http": "^10.4.0",
+    "zod": "^3.24.1"
+  }
+}
